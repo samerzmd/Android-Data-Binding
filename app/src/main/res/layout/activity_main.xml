@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="handlers" type="com.bignerdranch.android.android_data_binding.MyHandlers"/>
+        <variable name="user" type="com.bignerdranch.android.android_data_binding.User"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@{user.firstName}"
+                  android:onClick="@{user.isFriend ? handlers.onClickFriend : handlers.onClickEnemy}"/>
+        <Button android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@{user.lastName}"
+                  android:onClick="@{user.isFriend ? handlers.onClickFriend : handlers.onClickEnemy}"/>
+    </LinearLayout>
+</layout>

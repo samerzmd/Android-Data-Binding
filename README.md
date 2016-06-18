@@ -17,8 +17,8 @@ public class MyHandlers {
 }
 The binding expression can assign the click listener for a View:
 
-<?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+'<?xml version="1.0" encoding="utf-8"?>'
+'<layout xmlns:android="http://schemas.android.com/apk/res/android">
    <data>
        <variable name="handlers" type="com.example.Handlers"/>
        <variable name="user" type="com.example.User"/>
@@ -36,7 +36,7 @@ The binding expression can assign the click listener for a View:
            android:text="@{user.lastName}"
            android:onClick="@{user.isFriend ? handlers.onClickFriend : handlers.onClickEnemy}"/>
    </LinearLayout>
-</layout>
+</layout>'
 
 first i found that the docs created a class called MyHandlers but in the layout used com.example.Handlers
 no probelm i changed it to com.example.MyHandlers
